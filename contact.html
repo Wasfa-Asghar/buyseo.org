@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | BuySEO Support 24/7</title>
+  <meta name="description" content="Contact BuySEO 24/7 on WhatsApp and email. Sales, billing, tool access help. WhatsApp: +44 7845 432224.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://buyseo.org/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F9F7F2; --card: #fff; --ink: #1A1A1A; --muted: #6F6A64;
+      --line: #E7E2DA; --accent: #A85532; --font: "Plus Jakarta Sans", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font); background: var(--bg); color: var(--ink); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(100% - 2rem, 1040px); margin-inline: auto; }
+    .site-header {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(249,247,242,.92); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; min-height: 64px; gap: 1rem; }
+    .logo { display: inline-flex; align-items: center; gap: .5rem; font-weight: 800; }
+    .mark {
+      width: 28px; height: 28px; border-radius: 8px;
+      background: linear-gradient(145deg, #C46A42, #A85532);
+      display: grid; place-items: center; color: #fff; font-size: .85rem;
+    }
+    .nav-links { display: none; gap: 1.2rem; font-weight: 600; font-size: .92rem; color: #3d3a36; }
+    .nav-links a:hover { color: var(--accent); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .35rem;
+      border-radius: 999px; font-weight: 700; padding: .65rem 1.1rem; border: 1px solid transparent;
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: #8F4629; }
+    .btn-wa { background: #FF6A00; color: #fff; padding: .8rem 1.2rem; }
+    .btn-wa:hover { filter: brightness(1.05); }
+    .page { padding: 2.5rem 0 4rem; }
+    .page-head { margin-bottom: 1.75rem; }
+    .title-row { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1rem; margin-bottom: .55rem; }
+    h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); letter-spacing: -.03em; font-weight: 800; }
+    .live-badge {
+      display: inline-flex; align-items: center; gap: .4rem;
+      background: #E8F7EE; color: #1B7A45; border-radius: 999px;
+      padding: .35rem .75rem; font-size: .82rem; font-weight: 700;
+    }
+    .live-badge i { width: 7px; height: 7px; border-radius: 50%; background: #22A55A; display: inline-block; }
+    .lead { color: var(--muted); max-width: 560px; }
+    .cards {
+      display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1.5rem;
+    }
+    .card {
+      background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+      padding: 1.25rem 1.3rem; box-shadow: 0 8px 28px rgba(26,26,26,.05);
+      display: flex; flex-direction: column; gap: .55rem;
+    }
+    .icon {
+      width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center;
+    }
+    .icon.wa { background: #E8F2FF; color: #2F6FED; }
+    .icon.mail { background: #F1EAFF; color: #6B4DE6; }
+    .icon.status { background: #FDEEE6; color: #C45C2C; }
+    .card h2 { font-size: 1.1rem; }
+    .card p { color: var(--muted); font-size: .92rem; }
+    .card .emails { color: var(--muted); font-size: .9rem; word-break: break-word; }
+    .card .link { color: var(--accent); font-weight: 750; margin-top: auto; padding-top: .35rem; }
+    .card .link:hover { text-decoration: underline; }
+    .concierge {
+      background: #fff; border: 1px solid var(--line); border-radius: 20px;
+      padding: 1.4rem 1.5rem; box-shadow: 0 8px 28px rgba(26,26,26,.05);
+      margin-bottom: 2rem;
+    }
+    .concierge-top { display: flex; gap: .85rem; align-items: flex-start; margin-bottom: .85rem; }
+    .concierge-top h2 { font-size: 1.2rem; margin-bottom: .15rem; }
+    .concierge-top p { color: var(--muted); font-size: .9rem; }
+    .concierge > p { color: var(--muted); margin-bottom: .9rem; max-width: 640px; }
+    .checks { list-style: none; display: grid; gap: .45rem; margin-bottom: 1.15rem; }
+    .checks li { display: flex; gap: .5rem; align-items: flex-start; font-weight: 600; font-size: .95rem; }
+    .checks li::before { content: "✓"; color: #1B7A45; font-weight: 800; }
+    .about { margin-top: 1rem; }
+    .about h2 { font-size: 1.5rem; margin-bottom: .75rem; letter-spacing: -.02em; }
+    .about p { color: var(--muted); margin-bottom: .85rem; max-width: 760px; }
+    .about-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 1.25rem 0; }
+    .about-grid .card h3 { font-size: 1.05rem; margin-bottom: .35rem; }
+    .details-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.5rem; }
+    .details-grid h3 { font-size: .95rem; margin-bottom: .35rem; }
+    .details-grid p { color: var(--muted); font-size: .92rem; margin: 0; }
+    .footer {
+      border-top: 1px solid var(--line); padding: 1.25rem 0 2rem;
+      font-size: .85rem; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem;
+    }
+    @media (min-width: 700px) {
+      .nav-links { display: flex; }
+      .cards { grid-template-columns: repeat(3, 1fr); }
+      .about-grid, .details-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html"><span class="mark">★</span> BuySEO</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#tools">All tools</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#free-tools">Free tools</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <a class="btn btn-primary" href="https://seogroupsbuy.com/users/login" target="_blank" rel="noopener">Log in</a>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <div class="page-head">
+        <div class="title-row">
+          <h1>Contact Us</h1>
+          <span class="live-badge"><i></i> Our team is here 24/7</span>
+        </div>
+        <p class="lead">Our team is here 24/7. Tell us what happened and we will sort it out.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="icon wa" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg>
+          </div>
+          <h2>WhatsApp</h2>
+          <p>Fastest response. Real humans on WhatsApp.</p>
+          <a class="link" href="https://wa.me/447845432224" target="_blank" rel="noopener">Chat Now →</a>
+        </article>
+        <article class="card">
+          <div class="icon mail" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 7 9-7"/></svg>
+          </div>
+          <h2>Email Us</h2>
+          <p class="emails">support@seotoolsgroupbuy.us<br>seotoolsgroupbuy.us@gmail.com</p>
+          <a class="link" href="mailto:support@seotoolsgroupbuy.us">Send Email →</a>
+        </article>
+        <article class="card">
+          <div class="icon status" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 18V9M10 18V5M16 18v-7M22 18V8"/></svg>
+          </div>
+          <h2>Status Page</h2>
+          <p>Live uptime &amp; maintenance updates</p>
+          <a class="link" href="https://seogroupsbuy.com/" target="_blank" rel="noopener">Check Status →</a>
+        </article>
+      </div>
+
+      <section class="concierge" aria-labelledby="concierge-title">
+        <div class="concierge-top">
+          <div class="icon wa" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 7h12v9H9l-3 3V7z"/></svg>
+          </div>
+          <div>
+            <h2 id="concierge-title">Support concierge</h2>
+            <p>Your request starts here</p>
+          </div>
+        </div>
+        <p>We respond on WhatsApp and email. Typical reply time under 30 minutes during business hours.</p>
+        <ul class="checks">
+          <li>Sales &amp; billing help</li>
+          <li>Tool access issues</li>
+          <li>Escalation directly to tool owners</li>
+        </ul>
+        <a class="btn btn-wa" href="https://wa.me/447845432224" target="_blank" rel="noopener">Open WhatsApp chat →</a>
+      </section>
+
+      <section class="about" aria-labelledby="about-title">
+        <h2 id="about-title">About Us</h2>
+        <p>Experience the ultimate SEO tool solution with our cloud-based, legally purchased, and fully automated system — instant access to premium tools with support via WhatsApp and chat, all at an affordable monthly fee.</p>
+        <div class="about-grid">
+          <article class="card">
+            <h3>It’s who we are.</h3>
+            <p>Every member of the BuySEO team believes strongly in providing the best possible service and support for our clients. We don’t want anyone here who isn’t motivated to do everything possible for customers.</p>
+          </article>
+          <article class="card">
+            <h3>Smart Business</h3>
+            <p>We succeed when our customers succeed. People return again and again for Ahrefs, SEMrush, Canva, and the rest of the catalogue when they’re satisfied with their BuySEO experience.</p>
+          </article>
+        </div>
+        <p><strong>24/7</strong> — around-the-clock support for group buy tool access. Whether it’s midday research or a late-night unlock issue, agents are ready on WhatsApp, email, and chat.</p>
+        <ul class="checks" style="margin-top:1rem">
+          <li>We’ll work immediately on rare delivery or login problems — day or night</li>
+          <li>Questions about plans, fair-use, or tools — before or after you buy</li>
+          <li>Not sure which plan fits? We’ll recommend Lite, Small, or another pack</li>
+          <li>Need a custom mix of tools? Support can guide single-tool cart orders</li>
+        </ul>
+      </section>
+
+      <div class="details-grid">
+        <article class="card">
+          <h3>Mailing Address</h3>
+          <p>4735 Dogwood Lane<br>Tucson, AZ 85710</p>
+        </article>
+        <article class="card">
+          <h3>Phone</h3>
+          <p><a href="tel:+15207335652" style="color:var(--accent);font-weight:700">520-733-5652</a></p>
+          <p style="margin-top:.5rem"><a class="link" href="https://wa.me/447845432224" target="_blank" rel="noopener">WhatsApp chat →</a></p>
+        </article>
+        <article class="card">
+          <h3>Email</h3>
+          <p><a href="mailto:support@seotoolsgroupbuy.us" style="color:var(--accent);font-weight:700">support@seotoolsgroupbuy.us</a></p>
+          <p><a href="mailto:seotoolsgroupbuy.us@gmail.com" style="color:var(--accent);font-weight:700">seotoolsgroupbuy.us@gmail.com</a></p>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container footer">
+    <span>© 2026 BuySEO. All rights reserved.</span>
+    <a href="index.html" style="color:var(--accent);font-weight:700">← Back to home</a>
+  </footer>
+</body>
+</html>
