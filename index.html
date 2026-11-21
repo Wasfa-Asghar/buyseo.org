@@ -357,44 +357,7 @@
     .tools-footer-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
     .link-accent { color: var(--accent); font-weight: 700; }
 
-    /* Logo ribbon + stats (image 2) */
-    .logo-ribbon {
-      padding: 2.25rem 0 1.25rem;
-      text-align: center;
-      background: var(--bg);
-    }
-    .logo-ribbon p {
-      color: #7A736C;
-      font-size: 0.98rem;
-      margin-bottom: 1.25rem;
-      font-weight: 500;
-      letter-spacing: -0.01em;
-    }
-    .logo-track {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: center;
-      gap: 0.55rem;
-      overflow-x: auto;
-      padding: 0.15rem 0.25rem 0.5rem;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-    .logo-track::-webkit-scrollbar { display: none; }
-    .logo-tile {
-      width: 52px;
-      height: 52px;
-      flex: 0 0 auto;
-      border-radius: 14px;
-      background: #fff;
-      border: 1px solid #E8E2DA;
-      box-shadow: 0 1px 2px rgba(26, 26, 26, 0.03);
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-    }
-    .logo-tile img, .tool-icon img { width: 28px; height: 28px; object-fit: contain; }
-    .tool-icon img { width: 100%; height: 100%; }
+    .tool-icon img { width: 100%; height: 100%; object-fit: contain; }
     .collection-card { transition: border-color 0.15s ease, box-shadow 0.15s ease; }
     .collection-card:hover { border-color: #d6b5a4; box-shadow: var(--shadow); }
 
@@ -983,11 +946,6 @@
         repeating-conic-gradient(from 0deg at 50% 35%, transparent 0deg 8deg, rgba(217,138,102,.02) 8deg 9deg),
         var(--bg);
     }
-    html[data-theme="dark"] .logo-tile,
-    html[data-theme="dark"] .stat-card {
-      background: var(--card);
-      border-color: var(--line);
-    }
     html[data-theme="dark"] .stat-icon { background: var(--accent-soft); color: var(--accent); }
     html[data-theme="dark"] .stat-val { color: var(--ink); }
     html[data-theme="dark"] .tools-panel,
@@ -1008,7 +966,6 @@
     html[data-theme="dark"] .related-card,
     html[data-theme="dark"] .checklist li,
     html[data-theme="dark"] details.faq,
-    html[data-theme="dark"] .logo-tile,
     html[data-theme="dark"] .search-wrap input,
     html[data-theme="dark"] .cat,
     html[data-theme="dark"] .btn-secondary,
@@ -1166,14 +1123,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- LOGO RIBBON -->
-    <section class="logo-ribbon" aria-label="Trusted premium tools">
-      <div class="container">
-        <p>Instant access to the premium tools you already trust</p>
-        <div class="logo-track" id="logoTrack"></div>
       </div>
     </section>
 
@@ -1979,7 +1928,6 @@
           <h4>PRODUCT</h4>
           <a href="#tools">All Tools</a>
           <a href="#pricing">Pricing</a>
-          <a href="#free-tools">Free Tools</a>
           <a href="https://seogroupsbuy.com/users/login" target="_blank" rel="noopener">Login</a>
         </div>
         <div class="footer-col">
@@ -1988,7 +1936,6 @@
           <a href="contact.html">Contact</a>
           <a href="blog.html">Blog</a>
           <a href="faq.html">FAQ</a>
-          <a href="https://seogroupsbuy.com/users/login" target="_blank" rel="noopener">Reseller Panel</a>
         </div>
         <div class="footer-col">
           <h4>LEGAL</h4>
@@ -2088,13 +2035,6 @@
       showAll = !showAll;
       renderTools();
     });
-
-    const LOGO_IDS = [92,99,100,101,102,103,104,170,171,177,172,128,129,179,180,206,175,176];
-    document.getElementById("logoTrack").innerHTML = LOGO_IDS.map((id) => {
-      const t = TOOLS.find((x) => x.id === id);
-      if (!t) return "";
-      return `<div class="logo-tile" title="${t.name}"><img src="${logoUrl(t.domain)}" alt="${t.name}" width="28" height="28" loading="lazy" onerror="this.remove()"></div>`;
-    }).join("");
 
     const popTrack = document.getElementById("popularTrack");
     popTrack.innerHTML = POPULAR.map(t => {

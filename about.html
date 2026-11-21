@@ -4,23 +4,202 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About BuySEO | Group Buy SEO Tools Since 2019</title>
-  <meta name="description" content="BuySEO provides affordable group buy access to Ahrefs, Semrush, Canva Pro, ChatGPT and 100+ premium marketing tools since 2019.">
+  <meta name="description" content="Learn about BuySEO — group buy access to 100+ SEO and marketing tools since 2019. Mission, offers, popular tools, and how to reach support.">
   <link rel="canonical" href="https://buyseo.org/about.html">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="_page.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="chrome.css">
+  <style>
+    :root {
+      --ink: #0F172A;
+      --body: #1E293B;
+      --muted: #64748B;
+      --line: #E2E8F0;
+      --soft: #F1F5F9;
+      --cta-bg: #EFF6FF;
+      --accent: #A85532;
+      --font: "Plus Jakarta Sans", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font);
+      background: #fff;
+      color: var(--body);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; font-weight: 650; }
+    a:hover { text-decoration: underline; }
+    .about-page {
+      width: min(100% - 2.5rem, 720px);
+      margin: 0 auto;
+      padding: 2.75rem 0 4rem;
+    }
+    .intro {
+      color: var(--muted);
+      font-size: 0.98rem;
+      margin-bottom: 1.1rem;
+      text-align: center;
+    }
+    .about-page > h1 {
+      text-align: center;
+      font-size: clamp(1.55rem, 3.5vw, 2.05rem);
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      font-weight: 800;
+      margin-bottom: 2.25rem;
+    }
+    .about-page h2 {
+      font-size: 1.2rem;
+      color: var(--ink);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin: 2rem 0 0.75rem;
+    }
+    .about-page h2:first-of-type { margin-top: 0; }
+    .about-page p {
+      color: var(--body);
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+    }
+    .offer-list {
+      margin: 0.35rem 0 0;
+      padding-left: 1.25rem;
+      display: grid;
+      gap: 0.55rem;
+    }
+    .offer-list li { color: var(--body); }
+    .offer-list strong { color: var(--ink); font-weight: 750; }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      margin-top: 0.85rem;
+    }
+    .tool-chip {
+      background: var(--soft);
+      border-radius: 12px;
+      padding: 1.1rem 1rem;
+      text-align: center;
+      color: inherit;
+      text-decoration: none;
+      display: block;
+      transition: background 0.15s ease;
+    }
+    .tool-chip:hover { background: #E8EEF5; text-decoration: none; }
+    .tool-chip strong {
+      display: block;
+      color: var(--ink);
+      font-size: 1rem;
+      font-weight: 750;
+      margin-bottom: 0.2rem;
+    }
+    .tool-chip span {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .connect-list {
+      margin: 0.5rem 0 0;
+      padding-left: 1.25rem;
+      display: grid;
+      gap: 0.45rem;
+    }
+    .connect-list li { color: var(--body); }
+    .connect-list strong { color: var(--ink); font-weight: 750; }
+
+    .cta-box {
+      margin-top: 2.5rem;
+      background: var(--cta-bg);
+      border-radius: 16px;
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+    }
+    .cta-box h2 {
+      margin: 0 0 0.65rem;
+      font-size: 1.35rem;
+    }
+    .cta-box p {
+      color: var(--body);
+      max-width: 38rem;
+      margin: 0 auto;
+    }
+
+    html[data-theme="dark"] body { background: #1A1311; color: #E8DFD7; }
+    html[data-theme="dark"] .about-page > h1,
+    html[data-theme="dark"] .about-page h2,
+    html[data-theme="dark"] .offer-list strong,
+    html[data-theme="dark"] .connect-list strong,
+    html[data-theme="dark"] .tool-chip strong { color: #F5EDE7; }
+    html[data-theme="dark"] .about-page p,
+    html[data-theme="dark"] .offer-list li,
+    html[data-theme="dark"] .connect-list li,
+    html[data-theme="dark"] .cta-box p { color: #C9B8AC; }
+    html[data-theme="dark"] .intro,
+    html[data-theme="dark"] .tool-chip span { color: #9A897B; }
+    html[data-theme="dark"] .tool-chip { background: #241C18; }
+    html[data-theme="dark"] .tool-chip:hover { background: #2E241F; }
+    html[data-theme="dark"] .cta-box { background: #241C18; }
+    html[data-theme="dark"] a { color: #D98A66; }
+
+    @media (min-width: 560px) {
+      .tools-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 720px) {
+      .tools-grid { grid-template-columns: repeat(3, 1fr); }
+      .cta-box { padding: 2rem 2.25rem; }
+    }
+  </style>
 </head>
 <body>
-  <div class="wrap">
-    <article class="card">
-      <h1>About BuySEO</h1>
-      <p class="meta">Trusted group buy SEO tools · since 2019</p>
-      <p>BuySEO helps marketers, freelancers and agencies access premium SEO and marketing software without stacking full retail subscriptions. We buy official plans and give members secure, isolated access through a cloud dashboard.</p>
-      <p>Our catalogue covers Semrush, Ahrefs, Moz, Canva Pro, ChatGPT, Helium 10 and 100+ more tools — plus focused packs like Lite, Small, Student, Basic, Standard and Ecom. Every Buy Now button uses the same cart links long-time members already trust.</p>
-      <p>We focus on fair-use limits, fast activation after payment, and support for members across India, Pakistan, Bangladesh and beyond.</p>
-      <a class="btn" href="https://seogroupsbuy.com/users/login" target="_blank" rel="noopener">Log in / Start free →</a>
-    </article>
-  </div>
+  <main class="about-page">
+    <p class="intro">Learn more about BuySEO and our mission to make premium tools accessible.</p>
+    <h1>BuySEO: Group Buy Access to 100+ SEO &amp; Design Tools</h1>
+
+    <h2>About BuySEO</h2>
+    <p>BuySEO is a trusted group buy SEO tools provider, offering premium digital marketing software at member prices since 2019. We believe freelancers, agencies, and growing teams deserve the same stack the big players use — without stacking full retail invoices.</p>
+
+    <h2>Our Mission</h2>
+    <p>To open premium SEO and marketing tools to more people by delivering fair, shared access at a fraction of retail cost — so businesses, freelancers, and marketers can ship work faster without draining their budget.</p>
+
+    <h2>What We Offer</h2>
+    <ul class="offer-list">
+      <li><strong>100+ Premium Tools</strong> – Ahrefs, Semrush, Moz, Canva Pro, ChatGPT, Helium 10, and more from one dashboard</li>
+      <li><strong>Instant Access</strong> – Most orders activate within about two minutes after payment clears</li>
+      <li><strong>Affordable Pricing</strong> – Single tools and packs with clear BuySEO member prices</li>
+      <li><strong>24/7 Support</strong> – Real humans on WhatsApp, email, and phone when something needs fixing</li>
+      <li><strong>Regular Updates</strong> – Catalogue and access stay current as vendors ship new features</li>
+    </ul>
+
+    <h2>Popular Tools</h2>
+    <div class="tools-grid">
+      <a class="tool-chip" href="tools/ahref-combo-13.html"><strong>Ahrefs</strong><span>SEO Analysis</span></a>
+      <a class="tool-chip" href="tools/semrush-104.html"><strong>Semrush</strong><span>Marketing Suite</span></a>
+      <a class="tool-chip" href="tools/canva-pro-108.html"><strong>Canva Pro</strong><span>Design Tools</span></a>
+      <a class="tool-chip" href="tools/grammarly-105.html"><strong>Grammarly</strong><span>Writing Assistant</span></a>
+      <a class="tool-chip" href="tools/envato-elements-32.html"><strong>Envato Elements</strong><span>Creative Assets</span></a>
+      <a class="tool-chip" href="tools/midjourney-123.html"><strong>Midjourney</strong><span>AI Image Generation</span></a>
+    </div>
+
+    <h2>Connect With Us</h2>
+    <ul class="connect-list">
+      <li><strong>Email:</strong> <a href="mailto:support@seotoolsgroupbuy.us">support@seotoolsgroupbuy.us</a></li>
+      <li><strong>Email:</strong> <a href="mailto:seotoolsgroupbuy.us@gmail.com">seotoolsgroupbuy.us@gmail.com</a></li>
+      <li><strong>WhatsApp:</strong> <a href="https://wa.me/447845432224" target="_blank" rel="noopener">+44 7845 432224</a></li>
+      <li><strong>Phone:</strong> <a href="tel:+15207335652">520-733-5652</a></li>
+      <li><strong>Address:</strong> 4735 Dogwood Lane, Tucson, AZ 85710</li>
+      <li><strong>Member login:</strong> <a href="https://seogroupsbuy.com/users/login" target="_blank" rel="noopener">seogroupsbuy.com</a></li>
+    </ul>
+
+    <div class="cta-box">
+      <h2>Ready to Get Started?</h2>
+      <p>Browse our <a href="index.html#tools">tool store</a> or check out our <a href="index.html#pricing">plans</a> to find the perfect package for your needs.</p>
+    </div>
+  </main>
   <script src="chrome.js" data-base=""></script>
 </body>
 </html>

@@ -90,9 +90,6 @@
     '<a href="' +
     home +
     '#pricing">Pricing</a>' +
-    '<a href="' +
-    home +
-    '#free-tools">Free Tools</a>' +
     '<a href="https://seogroupsbuy.com/users/login" target="_blank" rel="noopener">Login</a>' +
     "</div>" +
     '<div class="footer-col"><h4>COMPANY</h4>' +
@@ -108,7 +105,6 @@
     '<a href="' +
     base +
     'faq.html">FAQ</a>' +
-    '<a href="https://seogroupsbuy.com/users/login" target="_blank" rel="noopener">Reseller Panel</a>' +
     "</div>" +
     '<div class="footer-col"><h4>LEGAL</h4>' +
     '<a href="' +

@@ -1,0 +1,74 @@
+/* Shared layout for FAQ + legal pages (minimal text column) */
+:root {
+  --legal-ink: #0F172A;
+  --legal-body: #1E293B;
+  --legal-muted: #64748B;
+  --legal-accent: #A85532;
+  --legal-font: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--legal-font);
+  background: #F8F7F5;
+  color: var(--legal-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--legal-accent); font-weight: 650; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.legal-page {
+  width: min(100% - 2.5rem, 760px);
+  margin: 0 auto;
+  padding: 2.75rem 0 4.5rem;
+}
+.legal-page > h1 {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  color: var(--legal-ink);
+  margin-bottom: 2rem;
+}
+.legal-page .meta {
+  color: var(--legal-muted);
+  font-size: 0.92rem;
+  margin: -1.25rem 0 2rem;
+}
+.legal-page h2 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--legal-ink);
+  letter-spacing: -0.02em;
+  margin: 2rem 0 0.65rem;
+}
+.legal-page h2:first-of-type { margin-top: 0; }
+.legal-page p {
+  font-size: 1rem;
+  color: var(--legal-body);
+  margin-bottom: 0.85rem;
+}
+.legal-page ul {
+  margin: 0.35rem 0 1rem;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.4rem;
+}
+.legal-page li { color: var(--legal-body); }
+
+.faq-item { margin-bottom: 1.85rem; }
+.faq-item h2 {
+  font-size: 1.12rem;
+  margin: 0 0 0.55rem;
+  line-height: 1.35;
+}
+.faq-item p { margin-bottom: 0.65rem; }
+.faq-item p:last-child { margin-bottom: 0; }
+.faq-item ul { margin-bottom: 0.5rem; }
+
+html[data-theme="dark"] body { background: #1A1311; color: #E8DFD7; }
+html[data-theme="dark"] .legal-page > h1,
+html[data-theme="dark"] .legal-page h2,
+html[data-theme="dark"] .faq-item h2 { color: #F5EDE7; }
+html[data-theme="dark"] .legal-page p,
+html[data-theme="dark"] .legal-page li { color: #C9B8AC; }
+html[data-theme="dark"] .legal-page .meta { color: #9A897B; }
+html[data-theme="dark"] a { color: #D98A66; }
