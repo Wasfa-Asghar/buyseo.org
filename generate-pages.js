@@ -92,6 +92,7 @@ for (const p of products) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../product.css">
+  <link rel="stylesheet" href="../chrome.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -110,22 +111,6 @@ for (const p of products) {
   </script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="logo" href="../index.html"><span class="mark">★</span> BuySEO</a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="../index.html#tools">All tools</a>
-        <a href="../index.html#pricing">Pricing</a>
-        <a href="../index.html#free-tools">Free tools</a>
-        <a href="../blog.html">Blog</a>
-      </nav>
-      <div class="nav-actions">
-        <a class="login" href="https://seogroupsbuy.com/users/login" target="_blank" rel="noopener">Log in</a>
-        <a class="btn btn-primary" href="https://seogroupsbuy.com/users/signup" target="_blank" rel="noopener">Start free</a>
-      </div>
-    </div>
-  </header>
-
   <main class="container page">
     <nav class="crumbs" aria-label="Breadcrumb">
       <a href="../index.html">Home</a>
@@ -205,19 +190,7 @@ for (const p of products) {
       <a class="btn btn-light" href="${cartUrl}" target="_blank" rel="noopener">Buy Now — ${esc(p.price)} →</a>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container foot">
-      <a class="logo" href="../index.html"><span class="mark">★</span> BuySEO</a>
-      <div class="foot-links">
-        <a href="../index.html#tools">All tools</a>
-        <a href="../index.html#pricing">Pricing</a>
-        <a href="../contact.html">Contact</a>
-        <a href="../terms.html">Terms</a>
-      </div>
-      <p>© ${new Date().getFullYear()} BuySEO · Canonical: <a href="${pageUrl}">${pageUrl}</a></p>
-    </div>
-  </footer>
+  <script src="../chrome.js" data-base="../"></script>
 </body>
 </html>
 `;

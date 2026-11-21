@@ -236,8 +236,8 @@
       position: relative; overflow: hidden;
       padding: 2.5rem 0 1.5rem;
       background:
-        radial-gradient(ellipse 80% 55% at 50% 0%, rgba(168, 85, 50, 0.08), transparent 60%),
-        repeating-conic-gradient(from 0deg at 50% 35%, transparent 0deg 8deg, rgba(168, 85, 50, 0.035) 8deg 9deg),
+        radial-gradient(ellipse 80% 55% at 50% 0%, rgba(168, 85, 50, 0.04), transparent 60%),
+        repeating-conic-gradient(from 0deg at 50% 35%, transparent 0deg 8deg, rgba(168, 85, 50, 0.018) 8deg 9deg),
         var(--bg);
     }
     .hero-inner { text-align: center; max-width: 820px; margin: 0 auto; }
@@ -357,18 +357,41 @@
     .tools-footer-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
     .link-accent { color: var(--accent); font-weight: 700; }
 
-    /* Logo ribbon */
-    .logo-ribbon { padding: 1.5rem 0 2.5rem; text-align: center; }
+    /* Logo ribbon + stats (image 2) */
+    .logo-ribbon {
+      padding: 2.25rem 0 1.25rem;
+      text-align: center;
+      background: var(--bg);
+    }
     .logo-ribbon p {
-      color: var(--muted); font-size: 0.95rem; margin-bottom: 1.1rem; font-weight: 550;
+      color: #7A736C;
+      font-size: 0.98rem;
+      margin-bottom: 1.25rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
     }
     .logo-track {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      gap: 0.55rem;
+      overflow-x: auto;
+      padding: 0.15rem 0.25rem 0.5rem;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
     }
+    .logo-track::-webkit-scrollbar { display: none; }
     .logo-tile {
-      width: 48px; height: 48px; border-radius: 12px; background: #fff;
-      border: 1px solid var(--line); display: grid; place-items: center;
-      font-size: 0.72rem; font-weight: 800; color: #3d3a36; overflow: hidden;
+      width: 52px;
+      height: 52px;
+      flex: 0 0 auto;
+      border-radius: 14px;
+      background: #fff;
+      border: 1px solid #E8E2DA;
+      box-shadow: 0 1px 2px rgba(26, 26, 26, 0.03);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
     }
     .logo-tile img, .tool-icon img { width: 28px; height: 28px; object-fit: contain; }
     .tool-icon img { width: 100%; height: 100%; }
@@ -376,21 +399,39 @@
     .collection-card:hover { border-color: #d6b5a4; box-shadow: var(--shadow); }
 
     /* Stats */
-    .stats { padding: 0 0 3rem; }
+    .stats { padding: 0.5rem 0 3.25rem; background: var(--bg); }
     .stats-grid {
       display: grid; grid-template-columns: 1fr; gap: 0.85rem;
     }
     .stat-card {
-      background: #fff; border: 1px solid var(--line); border-radius: 16px;
-      padding: 1.1rem 1.15rem; display: flex; align-items: center; gap: 0.9rem;
+      background: #fff;
+      border: 1px solid #E8E2DA;
+      border-radius: 16px;
+      padding: 1.15rem 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.95rem;
+      box-shadow: 0 1px 2px rgba(26, 26, 26, 0.02);
     }
     .stat-icon {
-      width: 44px; height: 44px; border-radius: 12px; background: var(--accent-soft);
-      color: var(--accent); display: grid; place-items: center; flex-shrink: 0;
+      width: 46px; height: 46px; border-radius: 12px; background: #F6E8DE;
+      color: #A85532; display: grid; place-items: center; flex-shrink: 0;
     }
     .stat-icon svg { width: 22px; height: 22px; }
-    .stat-val { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em; }
-    .stat-desc { font-size: 0.88rem; color: var(--muted); }
+    .stat-val {
+      font-size: 1.45rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: #1A1A1A;
+    }
+    .stat-desc {
+      font-size: 0.88rem;
+      color: #6F6A64;
+      line-height: 1.35;
+      margin-top: 0.15rem;
+      max-width: 11.5rem;
+    }
 
     /* Section commons */
     .section { padding: 3rem 0; }
@@ -938,10 +979,17 @@
     }
     html[data-theme="dark"] .hero {
       background:
-        radial-gradient(ellipse 80% 55% at 50% 0%, rgba(217,138,102,.12), transparent 60%),
-        repeating-conic-gradient(from 0deg at 50% 35%, transparent 0deg 8deg, rgba(217,138,102,.04) 8deg 9deg),
+        radial-gradient(ellipse 80% 55% at 50% 0%, rgba(217,138,102,.06), transparent 60%),
+        repeating-conic-gradient(from 0deg at 50% 35%, transparent 0deg 8deg, rgba(217,138,102,.02) 8deg 9deg),
         var(--bg);
     }
+    html[data-theme="dark"] .logo-tile,
+    html[data-theme="dark"] .stat-card {
+      background: var(--card);
+      border-color: var(--line);
+    }
+    html[data-theme="dark"] .stat-icon { background: var(--accent-soft); color: var(--accent); }
+    html[data-theme="dark"] .stat-val { color: var(--ink); }
     html[data-theme="dark"] .tools-panel,
     html[data-theme="dark"] .tool-card,
     html[data-theme="dark"] .stat-card,
@@ -2041,9 +2089,12 @@
       renderTools();
     });
 
-    document.getElementById("logoTrack").innerHTML = TOOLS.filter(t => ![13,4,207,10,6,95,96,97,11,12,98,2].includes(t.id)).slice(0, 18).map(t =>
-      `<div class="logo-tile" title="${t.name}"><img src="${logoUrl(t.domain)}" alt="${t.name}" width="28" height="28" loading="lazy" onerror="this.remove()"></div>`
-    ).join("");
+    const LOGO_IDS = [92,99,100,101,102,103,104,170,171,177,172,128,129,179,180,206,175,176];
+    document.getElementById("logoTrack").innerHTML = LOGO_IDS.map((id) => {
+      const t = TOOLS.find((x) => x.id === id);
+      if (!t) return "";
+      return `<div class="logo-tile" title="${t.name}"><img src="${logoUrl(t.domain)}" alt="${t.name}" width="28" height="28" loading="lazy" onerror="this.remove()"></div>`;
+    }).join("");
 
     const popTrack = document.getElementById("popularTrack");
     popTrack.innerHTML = POPULAR.map(t => {
